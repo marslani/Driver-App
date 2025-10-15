@@ -1500,7 +1500,7 @@ import axios from "axios";
 import "./App.css";
 
 // ✅ اگر آپ Vercel پر backend چلا رہے ہیں، یہاں اپنا backend URL لگائیں
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "./api";
 
 const App = () => {
   const [driverName] = useState("");
