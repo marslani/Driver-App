@@ -87,157 +87,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-.app-container {
-  text-align: center;
-  margin-top: 50px;
-  font-family: "Poppins", sans-serif;
-}
-
-.input {
-  padding: 10px;
-  width: 250px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 1px solid gray;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
-.btn {
-  background-color: #2563eb;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 10px;
-  width: 250px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: #1d4ed8;
-}
-
-.view-btn {
-  background-color: #16a34a;
-}
-
-.view-btn:hover {
-  background-color: #15803d;
-}
-
-.message {
-  margin-top: 15px;
-  font-weight: bold;
-  color: green;
-}
-
-/* Table Styles */
-.table-container {
-  margin-top: 30px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-th,
-td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-
-th {
-  background-color: #f3f4f6;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #f9fafb;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.filters {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.filters .input {
-  width: 200px;
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid #ccc;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .app-container {
   text-align: center;
   padding: 20px;
   font-family: "Poppins", sans-serif;
   background: #0a0a0a;
-  color: white;
+  color: rgb(253, 250, 250);
   min-height: 100vh;
 }
 
@@ -299,4 +154,201 @@ th {
 .message {
   color: #00ff9d;
   font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+.btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* ✅ رنگ بدلنے کے لیے */
+.btn.completed {
+  background-color: #00c853; /* Green for completed */
+}
+
+.btn.active {
+  background-color: #2196f3; /* Blue for active/current */
+}
+
+.btn.upcoming {
+  background-color: #9e9e9e; /* Gray for not started */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Buttons --- */
+.btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn.completed {
+  background-color: #00c853;
+  box-shadow: 0 0 10px #006400, 0 0 5px #5ef3a8;
+  transform: scale(1.05);
+  border: 2px solid;
+}
+
+.btn.active {
+  background-color: #2196f3;
+  animation: pulse 1.2s infinite;
+}
+
+.btn.upcoming {
+  background-color: #9e9e9e;
+}
+
+/* --- Pulse Animation --- */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0px #2196f3;
+  }
+  50% {
+    box-shadow: 0 0 15px #2196f3;
+  }
+  100% {
+    box-shadow: 0 0 0px #2196f3;
+  }
+}
+
+/* --- Progress Bar --- */
+.progress-bar {
+  width: 90%;
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px auto;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff9d, #00aaff);
+  width: 0;
+  border-radius: 10px;
+  transition: width 0.8s ease;
+}
+
+.progress-text {
+  text-align: center;
+  font-weight: bold;
+  color: #444;
+}
+
+/* --- Timer --- */
+.circle-timer {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff9d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.warning-box {
+  
+  
+  background-color: #ffe5e5;       /* ہلکا لال پس منظر */
+  border: 2px solid #ff4d4d;       /* سرخ بارڈر */
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  color: #a60000;                  /* گہرے سرخ الفاظ */
+  font-weight: 600;
+  font-size: 1.1rem;
+  animation: blinkRed 1s infinite; /* بلنک ایفیکٹ */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.ok-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.ok-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+/* بلنکنگ ایفیکٹ */
+@keyframes blinkRed {
+  0% {
+    background-color: #ffe5e5;
+  }
+  50% {
+    background-color: #ffcccc;
+  }
+  100% {
+    background-color: #ffe5e5;
+  }
 }
